@@ -3514,7 +3514,7 @@
             container.innerHTML = '<p class="no-results-message">正在加载博客列表...</p>';
 
             try {
-                const response = await fetch('/api/projects');
+                const response = await fetch(`${API_BASE}/projects`);
                 if (!response.ok) throw new Error(`服务器响应: ${response.status}`);
                 const projects = await response.json();
 
